@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
         Map<Character, Integer> lettersMap = new HashMap<>();
-        char[] characters = text.toCharArray();
 
-        for (char c : characters) {
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
             if (Character.isLetter(c)) {
                 if (lettersMap.containsKey(c)) {
                     int count = lettersMap.get(c) + 1;
